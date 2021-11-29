@@ -1,7 +1,7 @@
 ﻿
 namespace LittleSteps_Database
 {
-    partial class Form1
+    partial class loginScreenForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,7 +29,7 @@ namespace LittleSteps_Database
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(loginScreenForm));
             this.usernameTextField = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();

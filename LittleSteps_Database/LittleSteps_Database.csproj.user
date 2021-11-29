@@ -1,10 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="parentForm.cs">
+=======
+    <Compile Update="loginScreenForm.cs">
+>>>>>>> f6bc720e1718e2d90e05faebc27da0795090695c
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
