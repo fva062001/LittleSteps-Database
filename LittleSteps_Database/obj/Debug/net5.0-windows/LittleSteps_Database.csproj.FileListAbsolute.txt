@@ -6,7 +6,6 @@ C:\Users\Ferna\Desktop\Repository\LittleSteps-Database\LittleSteps_Database\bin\
 C:\Users\Ferna\Desktop\Repository\LittleSteps-Database\LittleSteps_Database\bin\Debug\net5.0-windows\ref\LittleSteps_Database.dll
 C:\Users\Ferna\Desktop\Repository\LittleSteps-Database\LittleSteps_Database\bin\Debug\net5.0-windows\LittleSteps_Database.pdb
 C:\Users\Ferna\Desktop\Repository\LittleSteps-Database\LittleSteps_Database\obj\Debug\net5.0-windows\LittleSteps_Database.csproj.AssemblyReference.cache
-C:\Users\Ferna\Desktop\Repository\LittleSteps-Database\LittleSteps_Database\obj\Debug\net5.0-windows\LittleSteps_Database.Form1.resources
 C:\Users\Ferna\Desktop\Repository\LittleSteps-Database\LittleSteps_Database\obj\Debug\net5.0-windows\LittleSteps_Database.Properties.Resources.resources
 C:\Users\Ferna\Desktop\Repository\LittleSteps-Database\LittleSteps_Database\obj\Debug\net5.0-windows\LittleSteps_Database.csproj.GenerateResource.cache
 C:\Users\Ferna\Desktop\Repository\LittleSteps-Database\LittleSteps_Database\obj\Debug\net5.0-windows\LittleSteps_Database.GeneratedMSBuildEditorConfig.editorconfig
@@ -24,3 +23,4 @@ C:\Users\Ferna\Desktop\Repository\LittleSteps-Database\LittleSteps_Database\bin\
 C:\Users\Ferna\Desktop\Repository\LittleSteps-Database\LittleSteps_Database\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Ferna\Desktop\Repository\LittleSteps-Database\LittleSteps_Database\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Ferna\Desktop\Repository\LittleSteps-Database\LittleSteps_Database\obj\Debug\net5.0-windows\LittleSteps_Database.csproj.CopyComplete
+C:\Users\Ferna\Desktop\Repository\LittleSteps-Database\LittleSteps_Database\obj\Debug\net5.0-windows\LittleSteps_Database.loginScreenForm.resources

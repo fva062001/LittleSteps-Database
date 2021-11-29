@@ -11,23 +11,12 @@ using System.Data.SqlClient;
 
 namespace LittleSteps_Database
 {
-    public partial class Form1 : Form
+    public partial class loginScreenForm : Form
     {
-        public Form1()
+        public loginScreenForm()
         {
             InitializeComponent();
         }
-
-
-
-
-
-
-
-
-
-
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
