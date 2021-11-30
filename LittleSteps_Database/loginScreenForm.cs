@@ -51,11 +51,11 @@ namespace LittleSteps_Database
             string username = usernameTextField.Text;
             string usernameCheck = "";
             string password = passwordTextField.Text;
-            String connection = "Data Source=MSI\\SQLEXPRESS;Initial Catalog=TEST;Integrated Security=True;";
+            String connection = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
             try
             {
                 SqlConnection con = new SqlConnection(connection);
-                string findQuery = "SELECT usuario from systemUser where usuario = @user";
+                string findQuery = "SELECT usuario from usuario where usuario = @user";
                 SqlCommand comm = new SqlCommand(findQuery, con);
                 comm.Parameters.AddWithValue("@user", usernameTextField.Text);
                 con.Open();
@@ -88,7 +88,7 @@ namespace LittleSteps_Database
                 else
                 {
                     SqlConnection con = new SqlConnection(connection);
-                    string registerQuery = "INSERT into systemUser(usuario,contrasena) VALUES(@usuario,@pwd)";
+                    string registerQuery = "INSERT into usuario(usuario,contrasena) VALUES(@usuario,@pwd)";
                     SqlCommand comm = new SqlCommand(registerQuery, con);
                     comm.Parameters.AddWithValue("@usuario", usernameTextField.Text);
                     comm.Parameters.AddWithValue("@pwd", passwordTextField.Text);
@@ -114,7 +114,7 @@ namespace LittleSteps_Database
             try
             {
                 SqlConnection con = new SqlConnection(connection);
-                string findQuery = "SELECT usuario,contrasena from systemUser where usuario = @user AND contrasena = @password";
+                string findQuery = "SELECT usuario,contrasena from usuario where usuario = @user AND contrasena = @password";
                 SqlCommand comm = new SqlCommand(findQuery, con);
                 comm.Parameters.AddWithValue("@user", usernameTextField.Text);
                 comm.Parameters.AddWithValue("@password", passwordTextField.Text);
