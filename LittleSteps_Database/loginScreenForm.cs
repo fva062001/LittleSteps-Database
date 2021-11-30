@@ -13,6 +13,7 @@ namespace LittleSteps_Database
 {
     public partial class loginScreenForm : Form
     {
+        private EmployeeForm employeeScreen;
         public loginScreenForm()
         {
             InitializeComponent();
@@ -107,11 +108,8 @@ namespace LittleSteps_Database
             string usernameCheck = "";
             string password = passwordTextField.Text;
             string passwordCheck = "";
-<<<<<<< Updated upstream
-            String connection = "workstation id=littlesteps.mssql.somee.com;packet size=4096;user id=xSerafini_SQLLogin_1;pwd=45bgyu4oj1;data source=littlesteps.mssql.somee.com;persist security info=False;initial catalog=littlesteps";
-=======
             String connection = "Data Source=MSI\\SQLEXPRESS;Initial Catalog=TEST;Integrated Security=True";
->>>>>>> Stashed changes
+
             try
             {
                 SqlConnection con = new SqlConnection(connection);
@@ -132,6 +130,9 @@ namespace LittleSteps_Database
                             {
                                 MessageBox.Show("Loggin Succesfully");
                                 //Aqui va abrir los forms 
+                                employeeScreen = new EmployeeForm();
+                                employeeScreen.Show();
+                                this.Hide();
                             }
                         }
                     }

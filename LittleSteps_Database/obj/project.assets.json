@@ -454,19 +454,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\alexs\\.nuget\\packages\\": {}
+    "C:\\Users\\Ferna\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alexs\\source\\repos\\fva062001\\LittleSteps-Database\\LittleSteps_Database\\LittleSteps_Database.csproj",
+      "projectUniqueName": "C:\\Users\\Ferna\\Desktop\\Repository\\LittleSteps-Database\\LittleSteps_Database\\LittleSteps_Database.csproj",
       "projectName": "LittleSteps_Database",
-      "projectPath": "C:\\Users\\alexs\\source\\repos\\fva062001\\LittleSteps-Database\\LittleSteps_Database\\LittleSteps_Database.csproj",
-      "packagesPath": "C:\\Users\\alexs\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alexs\\source\\repos\\fva062001\\LittleSteps-Database\\LittleSteps_Database\\obj\\",
+      "projectPath": "C:\\Users\\Ferna\\Desktop\\Repository\\LittleSteps-Database\\LittleSteps_Database\\LittleSteps_Database.csproj",
+      "packagesPath": "C:\\Users\\Ferna\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ferna\\Desktop\\Repository\\LittleSteps-Database\\LittleSteps_Database\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\alexs\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ferna\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
