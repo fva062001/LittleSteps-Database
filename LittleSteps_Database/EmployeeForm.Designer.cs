@@ -29,6 +29,7 @@ namespace LittleSteps_Database
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeeForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.parentPanel = new System.Windows.Forms.TabPage();
             this.parentTable = new System.Windows.Forms.DataGridView();
@@ -52,6 +53,7 @@ namespace LittleSteps_Database
             this.parentRNC = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.childPanel = new System.Windows.Forms.TabPage();
+            this.studentTable = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.studentGrade = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
@@ -73,6 +75,7 @@ namespace LittleSteps_Database
             this.studentID = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.profPanel = new System.Windows.Forms.TabPage();
+            this.profTable = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.profIdSearch = new System.Windows.Forms.Button();
             this.profRemove = new System.Windows.Forms.Button();
@@ -91,6 +94,7 @@ namespace LittleSteps_Database
             this.profID = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.assignPanel = new System.Windows.Forms.TabPage();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.cursoIdSearch = new System.Windows.Forms.Button();
             this.cursoRemove = new System.Windows.Forms.Button();
@@ -104,13 +108,10 @@ namespace LittleSteps_Database
             this.label28 = new System.Windows.Forms.Label();
             this.cursoID = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.studentTable = new System.Windows.Forms.DataGridView();
-            this.profTable = new System.Windows.Forms.DataGridView();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.classPanel = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.classCurso = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.classIdSearch = new System.Windows.Forms.Button();
             this.classRemove = new System.Windows.Forms.Button();
@@ -131,20 +132,20 @@ namespace LittleSteps_Database
             this.label34 = new System.Windows.Forms.Label();
             this.factMonto = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
-            this.classCurso = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.parentPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.parentTable)).BeginInit();
             this.parentBoxMessage.SuspendLayout();
             this.childPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.studentTable)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.profPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.profTable)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.assignPanel.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.studentTable)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.profTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.classPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox4.SuspendLayout();
@@ -400,6 +401,20 @@ namespace LittleSteps_Database
             this.childPanel.Text = "Estudiantes";
             this.childPanel.UseVisualStyleBackColor = true;
             // 
+            // studentTable
+            // 
+            this.studentTable.AllowUserToAddRows = false;
+            this.studentTable.AllowUserToDeleteRows = false;
+            this.studentTable.AllowUserToResizeRows = false;
+            this.studentTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.studentTable.Location = new System.Drawing.Point(8, 207);
+            this.studentTable.Name = "studentTable";
+            this.studentTable.ReadOnly = true;
+            this.studentTable.RowHeadersWidth = 51;
+            this.studentTable.RowTemplate.Height = 29;
+            this.studentTable.Size = new System.Drawing.Size(521, 236);
+            this.studentTable.TabIndex = 2;
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.studentGrade);
@@ -621,6 +636,20 @@ namespace LittleSteps_Database
             this.profPanel.Text = "Profesores";
             this.profPanel.UseVisualStyleBackColor = true;
             // 
+            // profTable
+            // 
+            this.profTable.AllowUserToAddRows = false;
+            this.profTable.AllowUserToDeleteRows = false;
+            this.profTable.AllowUserToResizeRows = false;
+            this.profTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.profTable.Location = new System.Drawing.Point(10, 204);
+            this.profTable.Name = "profTable";
+            this.profTable.ReadOnly = true;
+            this.profTable.RowHeadersWidth = 51;
+            this.profTable.RowTemplate.Height = 29;
+            this.profTable.Size = new System.Drawing.Size(521, 236);
+            this.profTable.TabIndex = 2;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.profIdSearch);
@@ -805,6 +834,20 @@ namespace LittleSteps_Database
             this.assignPanel.Text = "Cursos";
             this.assignPanel.UseVisualStyleBackColor = true;
             // 
+            // dataGridView3
+            // 
+            this.dataGridView3.AllowUserToAddRows = false;
+            this.dataGridView3.AllowUserToDeleteRows = false;
+            this.dataGridView3.AllowUserToResizeRows = false;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(9, 169);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.ReadOnly = true;
+            this.dataGridView3.RowHeadersWidth = 51;
+            this.dataGridView3.RowTemplate.Height = 29;
+            this.dataGridView3.Size = new System.Drawing.Size(521, 271);
+            this.dataGridView3.TabIndex = 2;
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.cursoIdSearch);
@@ -940,59 +983,6 @@ namespace LittleSteps_Database
             this.label29.Text = "Curso";
             this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Bienvenid@ de vuelta, ";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // studentTable
-            // 
-            this.studentTable.AllowUserToAddRows = false;
-            this.studentTable.AllowUserToDeleteRows = false;
-            this.studentTable.AllowUserToResizeRows = false;
-            this.studentTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.studentTable.Location = new System.Drawing.Point(8, 207);
-            this.studentTable.Name = "studentTable";
-            this.studentTable.ReadOnly = true;
-            this.studentTable.RowHeadersWidth = 51;
-            this.studentTable.RowTemplate.Height = 29;
-            this.studentTable.Size = new System.Drawing.Size(521, 236);
-            this.studentTable.TabIndex = 2;
-            // 
-            // profTable
-            // 
-            this.profTable.AllowUserToAddRows = false;
-            this.profTable.AllowUserToDeleteRows = false;
-            this.profTable.AllowUserToResizeRows = false;
-            this.profTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.profTable.Location = new System.Drawing.Point(10, 204);
-            this.profTable.Name = "profTable";
-            this.profTable.ReadOnly = true;
-            this.profTable.RowHeadersWidth = 51;
-            this.profTable.RowTemplate.Height = 29;
-            this.profTable.Size = new System.Drawing.Size(521, 236);
-            this.profTable.TabIndex = 2;
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.AllowUserToAddRows = false;
-            this.dataGridView3.AllowUserToDeleteRows = false;
-            this.dataGridView3.AllowUserToResizeRows = false;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(9, 169);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.ReadOnly = true;
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.RowTemplate.Height = 29;
-            this.dataGridView3.Size = new System.Drawing.Size(521, 271);
-            this.dataGridView3.TabIndex = 2;
-            // 
             // classPanel
             // 
             this.classPanel.Controls.Add(this.dataGridView1);
@@ -1040,6 +1030,14 @@ namespace LittleSteps_Database
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Para cualquier operacion se requiere el codigo del curso";
+            // 
+            // classCurso
+            // 
+            this.classCurso.Location = new System.Drawing.Point(376, 90);
+            this.classCurso.MaxLength = 13;
+            this.classCurso.Name = "classCurso";
+            this.classCurso.Size = new System.Drawing.Size(142, 27);
+            this.classCurso.TabIndex = 20;
             // 
             // label16
             // 
@@ -1232,13 +1230,16 @@ namespace LittleSteps_Database
             this.label36.Text = "Monto";
             this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // classCurso
+            // label1
             // 
-            this.classCurso.Location = new System.Drawing.Point(376, 90);
-            this.classCurso.MaxLength = 13;
-            this.classCurso.Name = "classCurso";
-            this.classCurso.Size = new System.Drawing.Size(142, 27);
-            this.classCurso.TabIndex = 20;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(160, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Bienvenid@ de vuelta, ";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // EmployeeForm
             // 
@@ -1247,6 +1248,7 @@ namespace LittleSteps_Database
             this.ClientSize = new System.Drawing.Size(548, 516);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EmployeeForm";
             this.Text = "Pantalla Empleado";
             this.Load += new System.EventHandler(this.EmployeeForm_Load);
@@ -1256,17 +1258,17 @@ namespace LittleSteps_Database
             this.parentBoxMessage.ResumeLayout(false);
             this.parentBoxMessage.PerformLayout();
             this.childPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.studentTable)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.profPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.profTable)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.assignPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.studentTable)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.profTable)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.classPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox4.ResumeLayout(false);
