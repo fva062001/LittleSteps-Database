@@ -1,19 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< Updated upstream
-    "C:\\Users\\Ferna\\Desktop\\Repository\\LittleSteps-Database\\LittleSteps_Database\\LittleSteps_Database.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\Ferna\\Desktop\\Repository\\LittleSteps-Database\\LittleSteps_Database\\LittleSteps_Database.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\Ferna\\Desktop\\Repository\\LittleSteps-Database\\LittleSteps_Database\\LittleSteps_Database.csproj",
-        "projectName": "LittleSteps_Database",
-        "projectPath": "C:\\Users\\Ferna\\Desktop\\Repository\\LittleSteps-Database\\LittleSteps_Database\\LittleSteps_Database.csproj",
-        "packagesPath": "C:\\Users\\Ferna\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ferna\\Desktop\\Repository\\LittleSteps-Database\\LittleSteps_Database\\obj\\",
-=======
     "C:\\Users\\alexs\\Source\\Repos\\fva062001\\LittleSteps-Database\\LittleSteps_Database\\LittleSteps_Database.csproj": {}
   },
   "projects": {
@@ -25,14 +12,9 @@
         "projectPath": "C:\\Users\\alexs\\Source\\Repos\\fva062001\\LittleSteps-Database\\LittleSteps_Database\\LittleSteps_Database.csproj",
         "packagesPath": "C:\\Users\\alexs\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\alexs\\Source\\Repos\\fva062001\\LittleSteps-Database\\LittleSteps_Database\\obj\\",
->>>>>>> Stashed changes
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Ferna\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\alexs\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

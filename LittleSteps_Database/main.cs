@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace LittleSteps_Database
 {
@@ -15,7 +16,7 @@ namespace LittleSteps_Database
         [STAThread]
         static void Main()
         {
-            String connection = "Data Source=MSI\\SQLEXPRESS;Initial Catalog=TEST;Integrated Security=True";
+            String connection = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
 
             SqlConnection con = new SqlConnection(connection);
             con.Open();

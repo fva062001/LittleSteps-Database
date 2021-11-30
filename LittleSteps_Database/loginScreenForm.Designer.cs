@@ -87,8 +87,10 @@ namespace LittleSteps_Database
             this.passwordTextField.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.passwordTextField.Location = new System.Drawing.Point(71, 448);
             this.passwordTextField.Name = "passwordTextField";
+            this.passwordTextField.PasswordChar = '*';
             this.passwordTextField.Size = new System.Drawing.Size(281, 40);
             this.passwordTextField.TabIndex = 3;
+            this.passwordTextField.UseSystemPasswordChar = true;
             this.passwordTextField.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // pictureBox1

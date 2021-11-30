@@ -52,3 +52,4 @@ C:\Users\Ferna\Desktop\Repository\LittleSteps-Database\LittleSteps_Database\obj\
 C:\Users\Ferna\Desktop\Repository\LittleSteps-Database\LittleSteps_Database\obj\Debug\net5.0-windows\ref\LittleSteps_Database.dll
 C:\Users\Ferna\Desktop\Repository\LittleSteps-Database\LittleSteps_Database\obj\Debug\net5.0-windows\LittleSteps_Database.pdb
 C:\Users\Ferna\Desktop\Repository\LittleSteps-Database\LittleSteps_Database\obj\Debug\net5.0-windows\LittleSteps_Database.genruntimeconfig.cache
+C:\Users\alexs\Source\Repos\fva062001\LittleSteps-Database\LittleSteps_Database\bin\Debug\net5.0-windows\LittleSteps_Database.dll.config

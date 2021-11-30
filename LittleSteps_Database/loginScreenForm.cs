@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace LittleSteps_Database
 {
@@ -108,7 +109,7 @@ namespace LittleSteps_Database
             string usernameCheck = "";
             string password = passwordTextField.Text;
             string passwordCheck = "";
-            String connection = "Data Source=MSI\\SQLEXPRESS;Initial Catalog=TEST;Integrated Security=True";
+            String connection = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
 
             try
             {
