@@ -43,7 +43,7 @@ namespace LittleSteps_Database
             // 
             // usernameTextField
             // 
-            this.usernameTextField.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.usernameTextField.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.usernameTextField.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.usernameTextField.Location = new System.Drawing.Point(71, 322);
             this.usernameTextField.Name = "usernameTextField";
@@ -83,7 +83,7 @@ namespace LittleSteps_Database
             // 
             // passwordTextField
             // 
-            this.passwordTextField.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.passwordTextField.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.passwordTextField.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.passwordTextField.Location = new System.Drawing.Point(71, 448);
             this.passwordTextField.Name = "passwordTextField";
