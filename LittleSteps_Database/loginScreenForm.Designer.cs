@@ -55,11 +55,11 @@ namespace LittleSteps_Database
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(71, 233);
+            this.label1.Location = new System.Drawing.Point(138, 233);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 34);
+            this.label1.Size = new System.Drawing.Size(175, 34);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Login";
+            this.label1.Text = "Little Steps";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
@@ -89,7 +89,6 @@ namespace LittleSteps_Database
             this.passwordTextField.Name = "passwordTextField";
             this.passwordTextField.Size = new System.Drawing.Size(281, 40);
             this.passwordTextField.TabIndex = 3;
-            this.passwordTextField.UseSystemPasswordChar = true;
             this.passwordTextField.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // pictureBox1
@@ -105,7 +104,7 @@ namespace LittleSteps_Database
             // 
             this.loginButton.Location = new System.Drawing.Point(71, 535);
             this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(94, 29);
+            this.loginButton.Size = new System.Drawing.Size(107, 35);
             this.loginButton.TabIndex = 6;
             this.loginButton.Text = "Login";
             this.loginButton.UseVisualStyleBackColor = true;
@@ -113,15 +112,15 @@ namespace LittleSteps_Database
             // 
             // registerButton
             // 
-            this.registerButton.Location = new System.Drawing.Point(258, 535);
+            this.registerButton.Location = new System.Drawing.Point(248, 535);
             this.registerButton.Name = "registerButton";
-            this.registerButton.Size = new System.Drawing.Size(94, 29);
+            this.registerButton.Size = new System.Drawing.Size(107, 35);
             this.registerButton.TabIndex = 7;
             this.registerButton.Text = "Register";
             this.registerButton.UseVisualStyleBackColor = true;
             this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
             // 
-            // Form1
+            // loginScreenForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -137,7 +136,7 @@ namespace LittleSteps_Database
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form1";
+            this.Name = "loginScreenForm";
             this.Text = "Little Steps System";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

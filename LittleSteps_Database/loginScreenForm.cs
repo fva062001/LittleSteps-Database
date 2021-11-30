@@ -45,51 +45,106 @@ namespace LittleSteps_Database
 
         private void registerButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Funciono xd");
+            int counter = 0;
+            string username = usernameTextField.Text;
+            string usernameCheck = "";
+            string password = passwordTextField.Text;
+            String connection = "Data Source=MSI\\SQLEXPRESS;Initial Catalog=TEST;Integrated Security=True;";
+            try
+            {
+                SqlConnection con = new SqlConnection(connection);
+                string findQuery = "SELECT usuario from systemUser where usuario = @user";
+                SqlCommand comm = new SqlCommand(findQuery, con);
+                comm.Parameters.AddWithValue("@user", usernameTextField.Text);
+                con.Open();
+                using (SqlDataReader reader = comm.ExecuteReader())
+                {
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            usernameCheck = reader["usuario"].ToString();
+                            if (username == usernameCheck)
+                            {
+                                counter++;
+                            }
+                        }
+                    }
+                }
+                con.Close();
+            }
+            catch (Exception es)
+            {
+                MessageBox.Show("Error: " + es + " \n Porfavor contacte al tecnico de informatica del area");
+            }
+            try
+            {
+                if (counter == 1)
+                {
+                    MessageBox.Show("El usuario ya existe, porfavor cambie el usuario nuevamente para poder completar el registro");
+                }
+                else
+                {
+                    SqlConnection con = new SqlConnection(connection);
+                    string registerQuery = "INSERT into systemUser(usuario,contrasena) VALUES(@usuario,@pwd)";
+                    SqlCommand comm = new SqlCommand(registerQuery, con);
+                    comm.Parameters.AddWithValue("@usuario", usernameTextField.Text);
+                    comm.Parameters.AddWithValue("@pwd", passwordTextField.Text);
+                    con.Open();
+                    comm.ExecuteNonQuery();
+                    MessageBox.Show("Se ha registrado el usuario correctamente");
+                    con.Close();
+                }
+            } catch (Exception es)
+            {
+                MessageBox.Show("Error:\n" + es + " \n Porfavor contacte al tecnico de informatica del area");
+            }
         }
-
+    
         private void loginButton_Click_1(object sender, EventArgs e)
         {
             string username = usernameTextField.Text;
             string usernameCheck = "";
             string password = passwordTextField.Text;
             string passwordCheck = "";
+<<<<<<< Updated upstream
             String connection = "workstation id=littlesteps.mssql.somee.com;packet size=4096;user id=xSerafini_SQLLogin_1;pwd=45bgyu4oj1;data source=littlesteps.mssql.somee.com;persist security info=False;initial catalog=littlesteps";
+=======
+            String connection = "Data Source=MSI\\SQLEXPRESS;Initial Catalog=TEST;Integrated Security=True";
+>>>>>>> Stashed changes
             try
             {
                 SqlConnection con = new SqlConnection(connection);
-                string findQuery = "SELECT usuario from usuario where usuario = @user";
-                string findQuery1 = "SELECT contrasena from usuario where contrasena = @password";
+                string findQuery = "SELECT usuario,contrasena from systemUser where usuario = @user AND contrasena = @password";
                 SqlCommand comm = new SqlCommand(findQuery, con);
-                SqlCommand comm1 = new SqlCommand(findQuery1, con);
-                comm1.Parameters.AddWithValue("@password", passwordTextField.Text);
                 comm.Parameters.AddWithValue("@user", usernameTextField.Text);
+                comm.Parameters.AddWithValue("@password", passwordTextField.Text);
                 con.Open();
                 using (SqlDataReader reader = comm.ExecuteReader())
                 {
-                    if(reader.HasRows){
-                        while(reader.Read())
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
                         {
-                            usernameCheck = reader[0].ToString();
-                            passwordCheck = reader[1].ToString();
-                            if(username == usernameCheck && password == passwordCheck)
+                            usernameCheck = reader["usuario"].ToString();
+                            passwordCheck = reader["contrasena"].ToString();
+                            if (username == usernameCheck && password == passwordCheck)
                             {
-                                MessageBox.Show("Funciono");
+                                MessageBox.Show("Loggin Succesfully");
+                                //Aqui va abrir los forms 
                             }
                         }
                     }
                     else
                     {
-                        MessageBox.Show("No funciono");
+                        MessageBox.Show("El usuario/contraseña esta incorrecta, porfavor intentelo nuevamente");
                     }
-                    
                 }
                 con.Close();
             }
             catch (Exception es)
             {
-                Console.WriteLine(es);
-                MessageBox.Show("No se encontro el usuario en el sistema, porfavor verifique nuevamente");
+                MessageBox.Show("Error: "+es+" \n Porfavor contacte al tecnico de informatica del area");
             }
             
         }
