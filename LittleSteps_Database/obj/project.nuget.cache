@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "KWcBkG9K5gHZQ7L0EvacyU0/8J1uHOLYoxf1EX8VIf7nVDOJi0rAFdV5t8tVUqdg8y2Z14LhrVct0QgkJ6ZvUA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ferna\\Desktop\\Repository\\LittleSteps-Database\\LittleSteps_Database\\LittleSteps_Database.csproj",
+=======
+  "dgSpecHash": "Nwrhnr8gCyJqjJcgyx17O6AbDG+qV+R+jn8uTFUYnMN6Txl08PJk1IqIB9grKAFQmV9KCHX/GTbe83Dw3GWPfg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\alexs\\Source\\Repos\\fva062001\\LittleSteps-Database\\LittleSteps_Database\\LittleSteps_Database.csproj",
+>>>>>>> Stashed changes
   "expectedPackageFiles": [
     "C:\\Users\\Ferna\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Ferna\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

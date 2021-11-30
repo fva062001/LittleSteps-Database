@@ -407,7 +407,7 @@ namespace LittleSteps_Database
             this.groupBox2.Size = new System.Drawing.Size(527, 194);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Para cualquier operacion se requiere la cedula";
+            this.groupBox2.Text = "Para cualquier operacion se requiere la matricula";
             // 
             // profIdSearch
             // 
