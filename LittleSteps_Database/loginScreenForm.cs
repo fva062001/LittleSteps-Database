@@ -54,7 +54,7 @@ namespace LittleSteps_Database
             string usernameCheck = "";
             string password = passwordTextField.Text;
             string passwordCheck = "";
-            String connection = "Data Source = MSI\\SQLEXPRESS; Initial Catalog = TEST; Integrated Security = True";
+            String connection = "workstation id=littlesteps.mssql.somee.com;packet size=4096;user id=xSerafini_SQLLogin_1;pwd=45bgyu4oj1;data source=littlesteps.mssql.somee.com;persist security info=False;initial catalog=littlesteps";
             try
             {
                 SqlConnection con = new SqlConnection(connection);

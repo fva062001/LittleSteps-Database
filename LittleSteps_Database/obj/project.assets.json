@@ -459,11 +459,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alexs\\Source\\Repos\\fva062001\\LittleSteps-Database\\LittleSteps_Database\\LittleSteps_Database.csproj",
+      "projectUniqueName": "C:\\Users\\alexs\\source\\repos\\fva062001\\LittleSteps-Database\\LittleSteps_Database\\LittleSteps_Database.csproj",
       "projectName": "LittleSteps_Database",
-      "projectPath": "C:\\Users\\alexs\\Source\\Repos\\fva062001\\LittleSteps-Database\\LittleSteps_Database\\LittleSteps_Database.csproj",
+      "projectPath": "C:\\Users\\alexs\\source\\repos\\fva062001\\LittleSteps-Database\\LittleSteps_Database\\LittleSteps_Database.csproj",
       "packagesPath": "C:\\Users\\alexs\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alexs\\Source\\Repos\\fva062001\\LittleSteps-Database\\LittleSteps_Database\\obj\\",
+      "outputPath": "C:\\Users\\alexs\\source\\repos\\fva062001\\LittleSteps-Database\\LittleSteps_Database\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\alexs\\AppData\\Roaming\\NuGet\\NuGet.Config",
