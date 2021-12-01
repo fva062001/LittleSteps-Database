@@ -258,7 +258,8 @@ namespace LittleSteps_Database
                             studentName.Text = reader["nombre"].ToString();
                             studentLast.Text = reader["apellido"].ToString();
                             studentDate.Text = Convert.ToDateTime(reader["fecha_nacimiento"]).ToString();
-                            //studentParentID.Text = reader["id_tutor"].ToString();
+                            studentParentID.Enabled = false;
+                            studentParentID.Text = reader["id_tutor"].ToString();
                             studentGrade.Text = reader["grado"].ToString();
                             if(reader["sexo"]== "M")
                             {
@@ -296,6 +297,7 @@ namespace LittleSteps_Database
         private void studentRegister_Click(object sender, EventArgs e)
         {
             int counter = 0;
+            bool parentExists = false;
             string username = studentID.Text;
             string usernameCheck = "";
             String connection = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
@@ -321,6 +323,25 @@ namespace LittleSteps_Database
                     }
                 }
                 con.Close();
+
+                findQuery = "SELECT * from tutor where cedula = @RNC";
+                comm = new SqlCommand(findQuery, con);
+                comm.Parameters.AddWithValue("@RNC", studentParentID.Text);
+                con.Open();
+                using (SqlDataReader reader = comm.ExecuteReader())
+                {
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            if (studentParentID.Text == reader["cedula"].ToString())
+                            {
+                                parentExists = true;
+                            }
+                        }
+                    }
+                }
+                con.Close();
             }
             catch (Exception es)
             {
@@ -332,15 +353,20 @@ namespace LittleSteps_Database
                 {
                     MessageBox.Show("El estudiante ya existe, porfavor cambie el estudiante nuevamente para poder completar el registro");
                 }
+                else if (!parentExists)
+                {
+                    MessageBox.Show("El tutor no existe, porfavor cambie la cedula nuevamente para poder completar el registro");
+                }
                 else
                 {
                     SqlConnection con = new SqlConnection(connection);
                     con.Open();
-                    string insertQuery = "insert into estudiante(matricula, nombre, apellido, sexo, fecha_nacimiento, grado) values (@matricula, @nombre, @apellido, @sexo, @fecha_nacimiento, @grado)";
+                    string insertQuery = "insert into estudiante(matricula, nombre, apellido, sexo, fecha_nacimiento, grado, id_tutor) values (@matricula, @nombre, @apellido, @sexo, @fecha_nacimiento, @grado, @tutor)";
                     SqlCommand comm1 = new SqlCommand(insertQuery,con);
                     comm1.Parameters.AddWithValue("@matricula",studentID.Text);
                     comm1.Parameters.AddWithValue("@nombre",studentName.Text);
                     comm1.Parameters.AddWithValue("@apellido",studentLast.Text);
+                    comm1.Parameters.AddWithValue("@tutor",studentParentID.Text);
                     comm1.Parameters.AddWithValue("@fecha_nacimiento",studentDate.Value.ToString());
                     if(studentSexF.Checked == true)
                     {
@@ -729,7 +755,7 @@ namespace LittleSteps_Database
         {
             String connection = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
             SqlConnection con = new SqlConnection(connection);
-            string updateQuery = "UPDATE clase SET nombre_clase = @nombre, ubicacion = @location, horario = @horario, grado = @grado, alumnos_inscritos = @alumnos WHERE classID = @classID";
+            string updateQuery = "UPDATE clase SET nombre_clase = @nombre, ubicacion = @location, horario = @horario, grado = @grado, alumnos_inscritos = @alumnos WHERE idClase = @classID";
             SqlCommand comm1 = new SqlCommand(updateQuery,con);
             try{
                 if(fieldsMissing("c") == true)
@@ -894,6 +920,7 @@ namespace LittleSteps_Database
                 studentSexM.Checked = false;
                 studentGrade.Text = "";
                 studentParentID.Text = "";
+                studentParentID.Enabled = true;
             }
             else if(name =="p")
             {
@@ -1046,6 +1073,8 @@ namespace LittleSteps_Database
 
         private void dataGridStudent_Click(object sender, EventArgs e)
         {
+            studentSexM.Enabled = true;
+            studentSexF.Enabled = true;
             string query = "select * from estudiante";
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ConnectionString);
 

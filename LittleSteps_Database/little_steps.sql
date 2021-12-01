@@ -1,7 +1,7 @@
-use Little_steps
-
 create database Little_steps
 go 
+
+use Little_steps
 
 create table usuario
 (

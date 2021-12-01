@@ -249,6 +249,7 @@ namespace LittleSteps_Database
             this.parentEmail.Location = new System.Drawing.Point(273, 24);
             this.parentEmail.MaxLength = 23;
             this.parentEmail.Name = "parentEmail";
+            this.parentEmail.PlaceholderText = "example@company.com";
             this.parentEmail.Size = new System.Drawing.Size(249, 27);
             this.parentEmail.TabIndex = 7;
             // 
@@ -285,7 +286,7 @@ namespace LittleSteps_Database
             // parentLoc
             // 
             this.parentLoc.Location = new System.Drawing.Point(77, 123);
-            this.parentLoc.MaxLength = 13;
+            this.parentLoc.MaxLength = 30;
             this.parentLoc.Name = "parentLoc";
             this.parentLoc.Size = new System.Drawing.Size(441, 27);
             this.parentLoc.TabIndex = 13;
@@ -322,6 +323,7 @@ namespace LittleSteps_Database
             this.parentPhone.Location = new System.Drawing.Point(376, 90);
             this.parentPhone.MaxLength = 13;
             this.parentPhone.Name = "parentPhone";
+            this.parentPhone.PlaceholderText = "xxx-xxx-xxxx";
             this.parentPhone.Size = new System.Drawing.Size(142, 27);
             this.parentPhone.TabIndex = 9;
             // 
@@ -762,8 +764,9 @@ namespace LittleSteps_Database
             // profPhone
             // 
             this.profPhone.Location = new System.Drawing.Point(77, 123);
-            this.profPhone.MaxLength = 13;
+            this.profPhone.MaxLength = 12;
             this.profPhone.Name = "profPhone";
+            this.profPhone.PlaceholderText = "xxx-xxx-xxxx";
             this.profPhone.Size = new System.Drawing.Size(142, 27);
             this.profPhone.TabIndex = 9;
             // 
@@ -780,8 +783,9 @@ namespace LittleSteps_Database
             // profEmail
             // 
             this.profEmail.Location = new System.Drawing.Point(376, 90);
-            this.profEmail.MaxLength = 13;
+            this.profEmail.MaxLength = 23;
             this.profEmail.Name = "profEmail";
+            this.profEmail.PlaceholderText = "example@company.com";
             this.profEmail.Size = new System.Drawing.Size(142, 27);
             this.profEmail.TabIndex = 7;
             // 
@@ -917,7 +921,7 @@ namespace LittleSteps_Database
             // classDiaClase
             // 
             this.classDiaClase.Location = new System.Drawing.Point(376, 60);
-            this.classDiaClase.MaxLength = 13;
+            this.classDiaClase.MaxLength = 20;
             this.classDiaClase.Name = "classDiaClase";
             this.classDiaClase.Size = new System.Drawing.Size(142, 27);
             this.classDiaClase.TabIndex = 26;
@@ -1058,7 +1062,7 @@ namespace LittleSteps_Database
             // className
             // 
             this.className.Location = new System.Drawing.Point(77, 57);
-            this.className.MaxLength = 13;
+            this.className.MaxLength = 20;
             this.className.Name = "className";
             this.className.Size = new System.Drawing.Size(142, 27);
             this.className.TabIndex = 3;
