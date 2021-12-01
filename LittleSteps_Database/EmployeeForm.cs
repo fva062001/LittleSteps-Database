@@ -43,6 +43,10 @@ namespace LittleSteps_Database
         {
         }
         //Works
+
+        //
+        //      TUTOR
+        //
         private void parentIdSearch_Click(object sender, EventArgs e)
         {
             DateTime nac;
@@ -230,8 +234,10 @@ namespace LittleSteps_Database
                 MessageBox.Show("Error:\n" + es + " \n Porfavor contacte al tecnico de informatica del area");
             }
         }
-        
-        //Falta lo del foreign Key
+
+        //
+        //      ESTUDIANTE
+        //
         private void studentIdSearch_Click(object sender, EventArgs e)
         {
             String connection = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
@@ -439,6 +445,9 @@ namespace LittleSteps_Database
             }
         }
 
+        //
+        //      PROFESOR
+        //
         private void profIdSearch_Click(object sender, EventArgs e)
         {
             String connection = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
@@ -536,10 +545,10 @@ namespace LittleSteps_Database
         {
             String connection = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
             SqlConnection con = new SqlConnection(connection);
-            string updateQuery = "UPDATE profesores SET nombre = @nombre, apellido = @apellido, fecha_nacimiento = @fecha_nacimiento, email = @email, telefono = @phone WHERE matricula = @matricula";
+            string updateQuery = "UPDATE profesor SET nombre = @nombre, apellido = @apellido, fecha_nacimiento = @fecha_nacimiento, email = @email, telefono = @phone WHERE matricula = @matricula";
             SqlCommand comm1 = new SqlCommand(updateQuery,con);
             try{
-                if(fieldsMissing("s") == true)
+                if(fieldsMissing("p") == true)
                 {
                     MessageBox.Show("Porfavor, llenar los campos vacios");
                 }
@@ -548,9 +557,9 @@ namespace LittleSteps_Database
                         comm1.Parameters.AddWithValue("@matricula",profID.Text);
                         comm1.Parameters.AddWithValue("@nombre",profName.Text);
                         comm1.Parameters.AddWithValue("@apellido",profLast.Text);
+                        comm1.Parameters.AddWithValue("@phone",profPhone.Text);
                         comm1.Parameters.AddWithValue("@fecha_nacimiento",profDate.Value.ToString());
                         comm1.Parameters.AddWithValue("@email",profEmail.Text);
-                        comm1.Parameters.AddWithValue("@telefono",profPhone.Text);
                         comm1.ExecuteNonQuery();
                         MessageBox.Show("Se han modificado los datos con exito");
                         clear("s");
@@ -569,7 +578,7 @@ namespace LittleSteps_Database
             try
             {
                 SqlConnection con = new SqlConnection(connection);
-                string findQuery = "SELECT * from profesores where matricula = @matricula";
+                string findQuery = "SELECT * from profesor where matricula = @matricula";
                 SqlCommand comm = new SqlCommand(findQuery, con);
                 comm.Parameters.AddWithValue("@matricula", profID.Text);
                 con.Open();
@@ -579,7 +588,7 @@ namespace LittleSteps_Database
                     {
                         while (reader.Read())
                         {
-                            if (reader["matricula"] == profID.Text)
+                            if (profID.Text == reader["matricula"].ToString())
                             {
                                 counter++;
                             }
@@ -598,12 +607,12 @@ namespace LittleSteps_Database
                 {
                     SqlConnection con = new SqlConnection(connection);
                     con.Open();
-                    string deleteQuery = "Delete from profesores where matricula = @matricula";
-                    SqlCommand comm1 = new SqlCommand(deleteQuery,con);
-                    comm1.Parameters.AddWithValue("@matricula",profID.Text);
+                    string deleteQuery = "Delete from profesor where matricula = @matricula";
+                    SqlCommand comm1 = new SqlCommand(deleteQuery, con);
+                    comm1.Parameters.AddWithValue("@matricula", profID.Text);
                     comm1.ExecuteNonQuery();
-                    MessageBox.Show("Se ha eliminado el profesor matricula: "+profID.Text);
-                    clear("s");
+                    MessageBox.Show("Se ha eliminado el profesor matricula: " + profID.Text);
+                    clear("t");
                     con.Close();
                 }
                 else
@@ -616,7 +625,9 @@ namespace LittleSteps_Database
             }
         }
 
-        //Hacerlo ahorita xd
+        //
+        //      CLASE
+        //
         private void classIdSearch_Click(object sender, EventArgs e)
         {
             String connection = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
@@ -687,7 +698,7 @@ namespace LittleSteps_Database
             {
                 if (counter == 1)
                 {
-                    MessageBox.Show("La clase ya existe, porfavor cambie la clase nuevamente para poder completar el registro");
+                    MessageBox.Show("La clase ya existe, por favor cambie la clase nuevamente para poder completar el registro");
                 }
                 else
                 {
@@ -721,7 +732,7 @@ namespace LittleSteps_Database
             string updateQuery = "UPDATE clase SET nombre_clase = @nombre, ubicacion = @location, horario = @horario, grado = @grado, alumnos_inscritos = @alumnos WHERE classID = @classID";
             SqlCommand comm1 = new SqlCommand(updateQuery,con);
             try{
-                if(fieldsMissing("s") == true)
+                if(fieldsMissing("c") == true)
                 {
                     MessageBox.Show("Porfavor, llenar los campos vacios");
                 }
@@ -747,12 +758,116 @@ namespace LittleSteps_Database
 
         private void classRemove_Click(object sender, EventArgs e)
         {
-
+            int counter = 0;
+            String connection = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
+            try
+            {
+                SqlConnection con = new SqlConnection(connection);
+                string findQuery = "SELECT * from clase where idClase = @classID";
+                SqlCommand comm = new SqlCommand(findQuery, con);
+                comm.Parameters.AddWithValue("@classID", classID.Text);
+                con.Open();
+                using (SqlDataReader reader = comm.ExecuteReader())
+                {
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            if (classID.Text == reader["idClase"].ToString())
+                            {
+                                counter++;
+                            }
+                        }
+                    }
+                }
+                con.Close();
+            }
+            catch (Exception es)
+            {
+                MessageBox.Show("Error: " + es + " \n Porfavor contacte al tecnico de informatica del area");
+            }
+            try
+            {
+                if (counter == 1)
+                {
+                    SqlConnection con = new SqlConnection(connection);
+                    con.Open();
+                    string deleteQuery = "Delete from clase where idClase = @classID";
+                    SqlCommand comm1 = new SqlCommand(deleteQuery, con);
+                    comm1.Parameters.AddWithValue("@classID", classID.Text);
+                    comm1.ExecuteNonQuery();
+                    MessageBox.Show("Se ha eliminado las clase ID: " + classID.Text);
+                    clear("t");
+                    con.Close();
+                }
+                else
+                {
+                    MessageBox.Show("La clase no existe, porfavor verifique el ID nuevamente");
+                }
+            } catch (Exception es)
+            {
+                MessageBox.Show("Error:\n" + es + " \n Porfavor contacte al tecnico de informatica del area");
+            }
         }
 
+        //
+        //      FACTURA
+        //
         private void factGenerate_Click(object sender, EventArgs e)
         {
+            bool tutorRegistered = false;
+            String connection = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
+            try
+            {
+                SqlConnection con = new SqlConnection(connection);
+                string findQuery = "SELECT * from tutor where cedula = @cedula";
+                SqlCommand comm = new SqlCommand(findQuery, con);
+                comm.Parameters.AddWithValue("@cedula", fact_cedula_tutor.Text);
+                con.Open();
+                using (SqlDataReader reader = comm.ExecuteReader())
+                {
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            if (fact_cedula_tutor.Text == reader["cedula"].ToString())
+                            {
+                                tutorRegistered = true;
+                            }
+                        }
+                    }
+                }
+                con.Close();
+            }
+            catch (Exception es)
+            {
+                MessageBox.Show("Error: " + es + " \n Porfavor contacte al tecnico de informatica del area");
+            }
+            try
+            {
+                if (tutorRegistered)
+                {
+                    SqlConnection con = new SqlConnection(connection);
+                    con.Open();
+                    string insertQuery = "exec efectuar_factura @importe = @monto, @cedula_tutor = @RNC";
+                    SqlCommand comm1 = new SqlCommand(insertQuery, con);
+                    comm1.Parameters.AddWithValue("@monto", factMonto.Text);
+                    comm1.Parameters.AddWithValue("@RNC", fact_cedula_tutor.Text);
+                    comm1.ExecuteScalar();
+                    MessageBox.Show("Se ha generado la factura: " + classID.Text);
+                    clear("f");
 
+                    con.Close();
+                }
+                else
+                {
+                    MessageBox.Show("El tutor designado no existe, por favor revise la cedula introducida");
+                }
+            }
+            catch (Exception es)
+            {
+                MessageBox.Show("Error: " + es + " \n Porfavor contacte al tecnico de informatica del area");
+            }
         }
 
         private void clear(string name)
@@ -793,7 +908,18 @@ namespace LittleSteps_Database
             else if(name=="c")
             {
                 //For class panel 
-                
+                classID.Text = "";
+                className.Text = "";
+                Horario.Text = "";
+                classDiaClase.Text = "";
+                ClassGrade.Text = "";
+                ClassLoc.Text = "";
+                classInscAlumn.Text = "";
+            }
+            else if (name == "f")
+            {
+                factMonto.Text = "";
+                fact_cedula_tutor.Text = "";
             }
         }
 
@@ -820,19 +946,14 @@ namespace LittleSteps_Database
             else if (name == "c")
             {
                 //For class panel 
-
+                return classID.Text == "" || className.Text == "" ||Horario.Text == "" || classDiaClase.Text == "" || ClassGrade.Text == "" || ClassLoc.Text == "" || classInscAlumn.Text == "";
             }
-            return false;
-        }
-
-        private void parentTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker4_ValueChanged(object sender, EventArgs e)
-        {
-
+            else if (name == "f")
+            {
+                //For receipt panel
+                return factMonto.Text == "" || fact_cedula_tutor.Text == "";
+            }
+            return true;
         }
 
         private void classTime_Click(object sender, EventArgs e)
@@ -886,6 +1007,82 @@ namespace LittleSteps_Database
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+            string query = "select * from profesor";
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ConnectionString);
+
+            conn.Open();
+
+            DataTable dt = new DataTable();
+
+            SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+
+            adapter.Fill(dt);
+
+            profTable.DataSource = dt;
+            profTable.Refresh();
+
+            conn.Close();
+        }
+
+        private void dataGridTeacher_Click(object sender, EventArgs e)
+        {
+            string query = "select * from tutor";
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ConnectionString);
+
+            conn.Open();
+
+            DataTable dt = new DataTable();
+
+            SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+
+            adapter.Fill(dt);
+
+            parentTable.DataSource = dt;
+            parentTable.Refresh();
+
+            conn.Close();
+        }
+
+        private void dataGridStudent_Click(object sender, EventArgs e)
+        {
+            string query = "select * from estudiante";
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ConnectionString);
+
+            conn.Open();
+
+            DataTable dt = new DataTable();
+
+            SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+
+            adapter.Fill(dt);
+
+            studentTable.DataSource = dt;
+            studentTable.Refresh();
+
+            conn.Close();
+        }
+
+        private void dataGridClass_Click(object sender, EventArgs e)
+        {
+            string query = "select * from clase";
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ConnectionString);
+
+            conn.Open();
+
+            DataTable dt = new DataTable();
+
+            SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+
+            adapter.Fill(dt);
+
+            classTable.DataSource = dt;
+            classTable.Refresh();
+
+            conn.Close();
+        }
+
+        private void dataGridProf_Click(object sender, EventArgs e)
         {
             string query = "select * from profesor";
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ConnectionString);

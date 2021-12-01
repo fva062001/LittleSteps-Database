@@ -32,6 +32,7 @@ namespace LittleSteps_Database
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeeForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.parentPanel = new System.Windows.Forms.TabPage();
+            this.dataGridTeacher = new System.Windows.Forms.Button();
             this.parentTable = new System.Windows.Forms.DataGridView();
             this.parentBoxMessage = new System.Windows.Forms.GroupBox();
             this.parentIdSearch = new System.Windows.Forms.Button();
@@ -53,6 +54,7 @@ namespace LittleSteps_Database
             this.parentRNC = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.childPanel = new System.Windows.Forms.TabPage();
+            this.dataGridStudent = new System.Windows.Forms.Button();
             this.studentTable = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.studentGrade = new System.Windows.Forms.TextBox();
@@ -75,6 +77,7 @@ namespace LittleSteps_Database
             this.studentID = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.profPanel = new System.Windows.Forms.TabPage();
+            this.dataGridProf = new System.Windows.Forms.Button();
             this.profTable = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.profIdSearch = new System.Windows.Forms.Button();
@@ -94,7 +97,8 @@ namespace LittleSteps_Database
             this.profID = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.classPanel = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridClass = new System.Windows.Forms.Button();
+            this.classTable = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.classDiaClase = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
@@ -119,12 +123,9 @@ namespace LittleSteps_Database
             this.fact_cedula_tutor = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.factGenerate = new System.Windows.Forms.Button();
-            this.factFechaLimite = new System.Windows.Forms.DateTimePicker();
-            this.label34 = new System.Windows.Forms.Label();
             this.factMonto = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridTeacher = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.parentPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.parentTable)).BeginInit();
@@ -136,7 +137,7 @@ namespace LittleSteps_Database
             ((System.ComponentModel.ISupportInitialize)(this.profTable)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.classPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.classTable)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.factPanel.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -152,21 +153,32 @@ namespace LittleSteps_Database
             this.tabControl1.Location = new System.Drawing.Point(1, 32);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(559, 528);
+            this.tabControl1.Size = new System.Drawing.Size(559, 434);
             this.tabControl1.TabIndex = 0;
             // 
             // parentPanel
             // 
+            this.parentPanel.Controls.Add(this.dataGridTeacher);
             this.parentPanel.Controls.Add(this.parentTable);
             this.parentPanel.Controls.Add(this.parentBoxMessage);
             this.parentPanel.Location = new System.Drawing.Point(4, 29);
             this.parentPanel.Name = "parentPanel";
             this.parentPanel.Padding = new System.Windows.Forms.Padding(3);
-            this.parentPanel.Size = new System.Drawing.Size(551, 477);
+            this.parentPanel.Size = new System.Drawing.Size(551, 401);
             this.parentPanel.TabIndex = 0;
             this.parentPanel.Text = "Tutores";
             this.parentPanel.UseVisualStyleBackColor = true;
             this.parentPanel.Click += new System.EventHandler(this.parentPanel_Click);
+            // 
+            // dataGridTeacher
+            // 
+            this.dataGridTeacher.Location = new System.Drawing.Point(231, 366);
+            this.dataGridTeacher.Name = "dataGridTeacher";
+            this.dataGridTeacher.Size = new System.Drawing.Size(94, 29);
+            this.dataGridTeacher.TabIndex = 4;
+            this.dataGridTeacher.Text = "Refresh";
+            this.dataGridTeacher.UseVisualStyleBackColor = true;
+            this.dataGridTeacher.Click += new System.EventHandler(this.dataGridTeacher_Click);
             // 
             // parentTable
             // 
@@ -180,9 +192,8 @@ namespace LittleSteps_Database
             this.parentTable.RowHeadersWidth = 51;
             this.parentTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.parentTable.RowTemplate.Height = 29;
-            this.parentTable.Size = new System.Drawing.Size(521, 236);
+            this.parentTable.Size = new System.Drawing.Size(526, 153);
             this.parentTable.TabIndex = 1;
-            this.parentTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.parentTable_CellContentClick);
             // 
             // parentBoxMessage
             // 
@@ -381,15 +392,26 @@ namespace LittleSteps_Database
             // 
             // childPanel
             // 
+            this.childPanel.Controls.Add(this.dataGridStudent);
             this.childPanel.Controls.Add(this.studentTable);
             this.childPanel.Controls.Add(this.groupBox1);
             this.childPanel.Location = new System.Drawing.Point(4, 29);
             this.childPanel.Name = "childPanel";
             this.childPanel.Padding = new System.Windows.Forms.Padding(3);
-            this.childPanel.Size = new System.Drawing.Size(551, 477);
+            this.childPanel.Size = new System.Drawing.Size(551, 401);
             this.childPanel.TabIndex = 1;
             this.childPanel.Text = "Estudiantes";
             this.childPanel.UseVisualStyleBackColor = true;
+            // 
+            // dataGridStudent
+            // 
+            this.dataGridStudent.Location = new System.Drawing.Point(231, 363);
+            this.dataGridStudent.Name = "dataGridStudent";
+            this.dataGridStudent.Size = new System.Drawing.Size(94, 29);
+            this.dataGridStudent.TabIndex = 6;
+            this.dataGridStudent.Text = "Refresh";
+            this.dataGridStudent.UseVisualStyleBackColor = true;
+            this.dataGridStudent.Click += new System.EventHandler(this.dataGridStudent_Click);
             // 
             // studentTable
             // 
@@ -397,13 +419,14 @@ namespace LittleSteps_Database
             this.studentTable.AllowUserToDeleteRows = false;
             this.studentTable.AllowUserToResizeRows = false;
             this.studentTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.studentTable.Location = new System.Drawing.Point(8, 207);
+            this.studentTable.Location = new System.Drawing.Point(10, 204);
             this.studentTable.Name = "studentTable";
             this.studentTable.ReadOnly = true;
             this.studentTable.RowHeadersWidth = 51;
+            this.studentTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.studentTable.RowTemplate.Height = 29;
-            this.studentTable.Size = new System.Drawing.Size(521, 236);
-            this.studentTable.TabIndex = 2;
+            this.studentTable.Size = new System.Drawing.Size(525, 153);
+            this.studentTable.TabIndex = 5;
             // 
             // groupBox1
             // 
@@ -617,15 +640,26 @@ namespace LittleSteps_Database
             // 
             // profPanel
             // 
+            this.profPanel.Controls.Add(this.dataGridProf);
             this.profPanel.Controls.Add(this.profTable);
             this.profPanel.Controls.Add(this.groupBox2);
             this.profPanel.Location = new System.Drawing.Point(4, 29);
             this.profPanel.Name = "profPanel";
-            this.profPanel.Size = new System.Drawing.Size(551, 495);
+            this.profPanel.Size = new System.Drawing.Size(551, 401);
             this.profPanel.TabIndex = 2;
             this.profPanel.Text = "Profesores";
             this.profPanel.UseVisualStyleBackColor = true;
             this.profPanel.Click += new System.EventHandler(this.profPanel_Click);
+            // 
+            // dataGridProf
+            // 
+            this.dataGridProf.Location = new System.Drawing.Point(229, 363);
+            this.dataGridProf.Name = "dataGridProf";
+            this.dataGridProf.Size = new System.Drawing.Size(94, 29);
+            this.dataGridProf.TabIndex = 8;
+            this.dataGridProf.Text = "Refresh";
+            this.dataGridProf.UseVisualStyleBackColor = true;
+            this.dataGridProf.Click += new System.EventHandler(this.dataGridProf_Click);
             // 
             // profTable
             // 
@@ -633,13 +667,14 @@ namespace LittleSteps_Database
             this.profTable.AllowUserToDeleteRows = false;
             this.profTable.AllowUserToResizeRows = false;
             this.profTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.profTable.Location = new System.Drawing.Point(10, 204);
+            this.profTable.Location = new System.Drawing.Point(8, 204);
             this.profTable.Name = "profTable";
             this.profTable.ReadOnly = true;
             this.profTable.RowHeadersWidth = 51;
+            this.profTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.profTable.RowTemplate.Height = 29;
-            this.profTable.Size = new System.Drawing.Size(521, 236);
-            this.profTable.TabIndex = 2;
+            this.profTable.Size = new System.Drawing.Size(527, 153);
+            this.profTable.TabIndex = 7;
             // 
             // groupBox2
             // 
@@ -816,28 +851,40 @@ namespace LittleSteps_Database
             // 
             // classPanel
             // 
-            this.classPanel.Controls.Add(this.dataGridView1);
+            this.classPanel.Controls.Add(this.dataGridClass);
+            this.classPanel.Controls.Add(this.classTable);
             this.classPanel.Controls.Add(this.groupBox4);
             this.classPanel.Location = new System.Drawing.Point(4, 29);
             this.classPanel.Name = "classPanel";
-            this.classPanel.Size = new System.Drawing.Size(551, 477);
+            this.classPanel.Size = new System.Drawing.Size(551, 401);
             this.classPanel.TabIndex = 4;
             this.classPanel.Text = "Clases";
             this.classPanel.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dataGridClass
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(10, 180);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(521, 264);
-            this.dataGridView1.TabIndex = 4;
+            this.dataGridClass.Location = new System.Drawing.Point(229, 349);
+            this.dataGridClass.Name = "dataGridClass";
+            this.dataGridClass.Size = new System.Drawing.Size(94, 29);
+            this.dataGridClass.TabIndex = 8;
+            this.dataGridClass.Text = "Refresh";
+            this.dataGridClass.UseVisualStyleBackColor = true;
+            this.dataGridClass.Click += new System.EventHandler(this.dataGridClass_Click);
+            // 
+            // classTable
+            // 
+            this.classTable.AllowUserToAddRows = false;
+            this.classTable.AllowUserToDeleteRows = false;
+            this.classTable.AllowUserToResizeRows = false;
+            this.classTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.classTable.Location = new System.Drawing.Point(8, 190);
+            this.classTable.Name = "classTable";
+            this.classTable.ReadOnly = true;
+            this.classTable.RowHeadersWidth = 51;
+            this.classTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.classTable.RowTemplate.Height = 29;
+            this.classTable.Size = new System.Drawing.Size(527, 153);
+            this.classTable.TabIndex = 7;
             // 
             // groupBox4
             // 
@@ -996,7 +1043,6 @@ namespace LittleSteps_Database
             this.Horario.Size = new System.Drawing.Size(142, 27);
             this.Horario.TabIndex = 11;
             this.Horario.Value = new System.DateTime(2021, 11, 30, 21, 24, 0, 0);
-            this.Horario.ValueChanged += new System.EventHandler(this.dateTimePicker4_ValueChanged);
             // 
             // classTime
             // 
@@ -1050,7 +1096,7 @@ namespace LittleSteps_Database
             this.factPanel.Controls.Add(this.groupBox5);
             this.factPanel.Location = new System.Drawing.Point(4, 29);
             this.factPanel.Name = "factPanel";
-            this.factPanel.Size = new System.Drawing.Size(551, 477);
+            this.factPanel.Size = new System.Drawing.Size(551, 401);
             this.factPanel.TabIndex = 5;
             this.factPanel.Text = "Factura";
             this.factPanel.UseVisualStyleBackColor = true;
@@ -1060,20 +1106,18 @@ namespace LittleSteps_Database
             this.groupBox5.Controls.Add(this.fact_cedula_tutor);
             this.groupBox5.Controls.Add(this.label23);
             this.groupBox5.Controls.Add(this.factGenerate);
-            this.groupBox5.Controls.Add(this.factFechaLimite);
-            this.groupBox5.Controls.Add(this.label34);
             this.groupBox5.Controls.Add(this.factMonto);
             this.groupBox5.Controls.Add(this.label36);
             this.groupBox5.Location = new System.Drawing.Point(7, 13);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(527, 430);
+            this.groupBox5.Size = new System.Drawing.Size(527, 378);
             this.groupBox5.TabIndex = 2;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Para proceder se debe tener un monto";
             // 
             // fact_cedula_tutor
             // 
-            this.fact_cedula_tutor.Location = new System.Drawing.Point(222, 92);
+            this.fact_cedula_tutor.Location = new System.Drawing.Point(222, 26);
             this.fact_cedula_tutor.MaxLength = 13;
             this.fact_cedula_tutor.Name = "fact_cedula_tutor";
             this.fact_cedula_tutor.Size = new System.Drawing.Size(142, 27);
@@ -1082,7 +1126,7 @@ namespace LittleSteps_Database
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(125, 95);
+            this.label23.Location = new System.Drawing.Point(125, 29);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(91, 20);
             this.label23.TabIndex = 16;
@@ -1091,30 +1135,13 @@ namespace LittleSteps_Database
             // 
             // factGenerate
             // 
-            this.factGenerate.Location = new System.Drawing.Point(222, 127);
+            this.factGenerate.Location = new System.Drawing.Point(222, 92);
             this.factGenerate.Name = "factGenerate";
             this.factGenerate.Size = new System.Drawing.Size(94, 29);
             this.factGenerate.TabIndex = 15;
             this.factGenerate.Text = "Generar";
             this.factGenerate.UseVisualStyleBackColor = true;
             this.factGenerate.Click += new System.EventHandler(this.factGenerate_Click);
-            // 
-            // factFechaLimite
-            // 
-            this.factFechaLimite.Location = new System.Drawing.Point(222, 26);
-            this.factFechaLimite.Name = "factFechaLimite";
-            this.factFechaLimite.Size = new System.Drawing.Size(142, 27);
-            this.factFechaLimite.TabIndex = 11;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(130, 31);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(89, 20);
-            this.label34.TabIndex = 10;
-            this.label34.Text = "Fecha limite";
-            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // factMonto
             // 
@@ -1127,7 +1154,7 @@ namespace LittleSteps_Database
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(170, 62);
+            this.label36.Location = new System.Drawing.Point(163, 62);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(53, 20);
             this.label36.TabIndex = 6;
@@ -1139,28 +1166,17 @@ namespace LittleSteps_Database
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 20);
+            this.label1.Size = new System.Drawing.Size(153, 20);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Bienvenid@ de vuelta, ";
+            this.label1.Text = "Bienvenid@ de vuelta";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // dataGridTeacher
-            // 
-            this.dataGridTeacher.Location = new System.Drawing.Point(235, 507);
-            this.dataGridTeacher.Name = "dataGridTeacher";
-            this.dataGridTeacher.Size = new System.Drawing.Size(94, 29);
-            this.dataGridTeacher.TabIndex = 3;
-            this.dataGridTeacher.Text = "Refresh";
-            this.dataGridTeacher.UseVisualStyleBackColor = true;
-            this.dataGridTeacher.Click += new System.EventHandler(this.button1_Click);
             // 
             // EmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(557, 549);
-            this.Controls.Add(this.dataGridTeacher);
+            this.ClientSize = new System.Drawing.Size(557, 464);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1181,7 +1197,7 @@ namespace LittleSteps_Database
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.classPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.classTable)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.factPanel.ResumeLayout(false);
@@ -1270,11 +1286,8 @@ namespace LittleSteps_Database
         private System.Windows.Forms.CheckBox studentSexF;
         private System.Windows.Forms.CheckBox studentSexM;
         private System.Windows.Forms.DataGridView parentTable;
-        private System.Windows.Forms.DataGridView studentTable;
-        private System.Windows.Forms.DataGridView profTable;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.TabPage classPanel;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button classIdSearch;
@@ -1290,8 +1303,6 @@ namespace LittleSteps_Database
         private System.Windows.Forms.TabPage factPanel;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Button factGenerate;
-        private System.Windows.Forms.DateTimePicker factFechaLimite;
-        private System.Windows.Forms.Label label34;
         private System.Windows.Forms.TextBox factMonto;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.TextBox classInscAlumn;
@@ -1303,5 +1314,11 @@ namespace LittleSteps_Database
         private System.Windows.Forms.TextBox classDiaClase;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Button dataGridTeacher;
+        private System.Windows.Forms.Button dataGridStudent;
+        private System.Windows.Forms.DataGridView studentTable;
+        private System.Windows.Forms.Button dataGridProf;
+        private System.Windows.Forms.DataGridView profTable;
+        private System.Windows.Forms.Button dataGridClass;
+        private System.Windows.Forms.DataGridView classTable;
     }
 }
