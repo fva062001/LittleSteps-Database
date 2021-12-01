@@ -36,16 +36,16 @@ namespace LittleSteps_Database
             this.parentBoxMessage = new System.Windows.Forms.GroupBox();
             this.parentIdSearch = new System.Windows.Forms.Button();
             this.parentRemove = new System.Windows.Forms.Button();
+            this.parentEmail = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.parentModify = new System.Windows.Forms.Button();
             this.parentRegister = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.parentLoc = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.parentDate = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.parentPhone = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.parentEmail = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.parentLast = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.parentName = new System.Windows.Forms.TextBox();
@@ -81,8 +81,8 @@ namespace LittleSteps_Database
             this.profRemove = new System.Windows.Forms.Button();
             this.profModify = new System.Windows.Forms.Button();
             this.profRegister = new System.Windows.Forms.Button();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.profDate = new System.Windows.Forms.Label();
+            this.profDate = new System.Windows.Forms.DateTimePicker();
+            this.A = new System.Windows.Forms.Label();
             this.profPhone = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.profEmail = new System.Windows.Forms.TextBox();
@@ -93,46 +93,38 @@ namespace LittleSteps_Database
             this.label21 = new System.Windows.Forms.Label();
             this.profID = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.assignPanel = new System.Windows.Forms.TabPage();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.cursoIdSearch = new System.Windows.Forms.Button();
-            this.cursoRemove = new System.Windows.Forms.Button();
-            this.cursoModify = new System.Windows.Forms.Button();
-            this.cursoRegister = new System.Windows.Forms.Button();
-            this.cursoLoc = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.cursoGrade = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.cursoSlots = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.cursoID = new System.Windows.Forms.TextBox();
-            this.label29 = new System.Windows.Forms.Label();
             this.classPanel = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.classCurso = new System.Windows.Forms.TextBox();
+            this.classDiaClase = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.ClassLoc = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.ClassGrade = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.classInscAlumn = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.classIdSearch = new System.Windows.Forms.Button();
             this.classRemove = new System.Windows.Forms.Button();
             this.classModify = new System.Windows.Forms.Button();
             this.classRegister = new System.Windows.Forms.Button();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+            this.Horario = new System.Windows.Forms.DateTimePicker();
             this.classTime = new System.Windows.Forms.Label();
-            this.classOccupied = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
             this.className = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
             this.classID = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
             this.factPanel = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.fact_cedula_tutor = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
             this.factGenerate = new System.Windows.Forms.Button();
             this.factFechaLimite = new System.Windows.Forms.DateTimePicker();
             this.label34 = new System.Windows.Forms.Label();
             this.factMonto = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.dataGridTeacher = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.parentPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.parentTable)).BeginInit();
@@ -143,9 +135,6 @@ namespace LittleSteps_Database
             this.profPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profTable)).BeginInit();
             this.groupBox2.SuspendLayout();
-            this.assignPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            this.groupBox3.SuspendLayout();
             this.classPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox4.SuspendLayout();
@@ -158,13 +147,12 @@ namespace LittleSteps_Database
             this.tabControl1.Controls.Add(this.parentPanel);
             this.tabControl1.Controls.Add(this.childPanel);
             this.tabControl1.Controls.Add(this.profPanel);
-            this.tabControl1.Controls.Add(this.assignPanel);
             this.tabControl1.Controls.Add(this.classPanel);
             this.tabControl1.Controls.Add(this.factPanel);
             this.tabControl1.Location = new System.Drawing.Point(1, 32);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(550, 485);
+            this.tabControl1.Size = new System.Drawing.Size(559, 528);
             this.tabControl1.TabIndex = 0;
             // 
             // parentPanel
@@ -174,7 +162,7 @@ namespace LittleSteps_Database
             this.parentPanel.Location = new System.Drawing.Point(4, 29);
             this.parentPanel.Name = "parentPanel";
             this.parentPanel.Padding = new System.Windows.Forms.Padding(3);
-            this.parentPanel.Size = new System.Drawing.Size(542, 452);
+            this.parentPanel.Size = new System.Drawing.Size(551, 477);
             this.parentPanel.TabIndex = 0;
             this.parentPanel.Text = "Tutores";
             this.parentPanel.UseVisualStyleBackColor = true;
@@ -190,24 +178,26 @@ namespace LittleSteps_Database
             this.parentTable.Name = "parentTable";
             this.parentTable.ReadOnly = true;
             this.parentTable.RowHeadersWidth = 51;
+            this.parentTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.parentTable.RowTemplate.Height = 29;
             this.parentTable.Size = new System.Drawing.Size(521, 236);
             this.parentTable.TabIndex = 1;
+            this.parentTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.parentTable_CellContentClick);
             // 
             // parentBoxMessage
             // 
             this.parentBoxMessage.Controls.Add(this.parentIdSearch);
             this.parentBoxMessage.Controls.Add(this.parentRemove);
+            this.parentBoxMessage.Controls.Add(this.parentEmail);
+            this.parentBoxMessage.Controls.Add(this.label5);
             this.parentBoxMessage.Controls.Add(this.parentModify);
             this.parentBoxMessage.Controls.Add(this.parentRegister);
-            this.parentBoxMessage.Controls.Add(this.textBox1);
+            this.parentBoxMessage.Controls.Add(this.parentLoc);
             this.parentBoxMessage.Controls.Add(this.label8);
             this.parentBoxMessage.Controls.Add(this.parentDate);
             this.parentBoxMessage.Controls.Add(this.label7);
             this.parentBoxMessage.Controls.Add(this.parentPhone);
             this.parentBoxMessage.Controls.Add(this.label6);
-            this.parentBoxMessage.Controls.Add(this.parentEmail);
-            this.parentBoxMessage.Controls.Add(this.label5);
             this.parentBoxMessage.Controls.Add(this.parentLast);
             this.parentBoxMessage.Controls.Add(this.label4);
             this.parentBoxMessage.Controls.Add(this.parentName);
@@ -243,6 +233,24 @@ namespace LittleSteps_Database
             this.parentRemove.UseVisualStyleBackColor = true;
             this.parentRemove.Click += new System.EventHandler(this.parentRemove_Click);
             // 
+            // parentEmail
+            // 
+            this.parentEmail.Location = new System.Drawing.Point(273, 24);
+            this.parentEmail.MaxLength = 23;
+            this.parentEmail.Name = "parentEmail";
+            this.parentEmail.Size = new System.Drawing.Size(249, 27);
+            this.parentEmail.TabIndex = 7;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(229, 27);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(46, 20);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Email";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // parentModify
             // 
             this.parentModify.Location = new System.Drawing.Point(222, 156);
@@ -263,13 +271,13 @@ namespace LittleSteps_Database
             this.parentRegister.UseVisualStyleBackColor = true;
             this.parentRegister.Click += new System.EventHandler(this.parentRegister_Click);
             // 
-            // textBox1
+            // parentLoc
             // 
-            this.textBox1.Location = new System.Drawing.Point(77, 123);
-            this.textBox1.MaxLength = 13;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(441, 27);
-            this.textBox1.TabIndex = 13;
+            this.parentLoc.Location = new System.Drawing.Point(77, 123);
+            this.parentLoc.MaxLength = 13;
+            this.parentLoc.Name = "parentLoc";
+            this.parentLoc.Size = new System.Drawing.Size(441, 27);
+            this.parentLoc.TabIndex = 13;
             // 
             // label8
             // 
@@ -283,7 +291,7 @@ namespace LittleSteps_Database
             // 
             // parentDate
             // 
-            this.parentDate.Location = new System.Drawing.Point(376, 24);
+            this.parentDate.Location = new System.Drawing.Point(376, 57);
             this.parentDate.Name = "parentDate";
             this.parentDate.Size = new System.Drawing.Size(142, 27);
             this.parentDate.TabIndex = 11;
@@ -291,7 +299,7 @@ namespace LittleSteps_Database
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(242, 27);
+            this.label7.Location = new System.Drawing.Point(242, 60);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(128, 20);
             this.label7.TabIndex = 10;
@@ -315,24 +323,6 @@ namespace LittleSteps_Database
             this.label6.TabIndex = 8;
             this.label6.Text = "Telefono";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // parentEmail
-            // 
-            this.parentEmail.Location = new System.Drawing.Point(376, 57);
-            this.parentEmail.MaxLength = 13;
-            this.parentEmail.Name = "parentEmail";
-            this.parentEmail.Size = new System.Drawing.Size(142, 27);
-            this.parentEmail.TabIndex = 7;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(324, 60);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 20);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Email";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // parentLast
             // 
@@ -396,7 +386,7 @@ namespace LittleSteps_Database
             this.childPanel.Location = new System.Drawing.Point(4, 29);
             this.childPanel.Name = "childPanel";
             this.childPanel.Padding = new System.Windows.Forms.Padding(3);
-            this.childPanel.Size = new System.Drawing.Size(542, 452);
+            this.childPanel.Size = new System.Drawing.Size(551, 477);
             this.childPanel.TabIndex = 1;
             this.childPanel.Text = "Estudiantes";
             this.childPanel.UseVisualStyleBackColor = true;
@@ -631,10 +621,11 @@ namespace LittleSteps_Database
             this.profPanel.Controls.Add(this.groupBox2);
             this.profPanel.Location = new System.Drawing.Point(4, 29);
             this.profPanel.Name = "profPanel";
-            this.profPanel.Size = new System.Drawing.Size(542, 452);
+            this.profPanel.Size = new System.Drawing.Size(551, 495);
             this.profPanel.TabIndex = 2;
             this.profPanel.Text = "Profesores";
             this.profPanel.UseVisualStyleBackColor = true;
+            this.profPanel.Click += new System.EventHandler(this.profPanel_Click);
             // 
             // profTable
             // 
@@ -656,8 +647,8 @@ namespace LittleSteps_Database
             this.groupBox2.Controls.Add(this.profRemove);
             this.groupBox2.Controls.Add(this.profModify);
             this.groupBox2.Controls.Add(this.profRegister);
-            this.groupBox2.Controls.Add(this.dateTimePicker3);
             this.groupBox2.Controls.Add(this.profDate);
+            this.groupBox2.Controls.Add(this.A);
             this.groupBox2.Controls.Add(this.profPhone);
             this.groupBox2.Controls.Add(this.label18);
             this.groupBox2.Controls.Add(this.profEmail);
@@ -716,22 +707,22 @@ namespace LittleSteps_Database
             this.profRegister.UseVisualStyleBackColor = true;
             this.profRegister.Click += new System.EventHandler(this.profRegister_Click);
             // 
-            // dateTimePicker3
-            // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(376, 55);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(142, 27);
-            this.dateTimePicker3.TabIndex = 11;
-            // 
             // profDate
             // 
-            this.profDate.AutoSize = true;
-            this.profDate.Location = new System.Drawing.Point(242, 58);
+            this.profDate.Location = new System.Drawing.Point(376, 55);
             this.profDate.Name = "profDate";
-            this.profDate.Size = new System.Drawing.Size(128, 20);
-            this.profDate.TabIndex = 10;
-            this.profDate.Text = "Fecha Nacimiento";
-            this.profDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.profDate.Size = new System.Drawing.Size(142, 27);
+            this.profDate.TabIndex = 11;
+            // 
+            // A
+            // 
+            this.A.AutoSize = true;
+            this.A.Location = new System.Drawing.Point(242, 58);
+            this.A.Name = "A";
+            this.A.Size = new System.Drawing.Size(128, 20);
+            this.A.TabIndex = 10;
+            this.A.Text = "Fecha Nacimiento";
+            this.A.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // profPhone
             // 
@@ -823,173 +814,13 @@ namespace LittleSteps_Database
             this.label22.Text = "Matricula";
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // assignPanel
-            // 
-            this.assignPanel.Controls.Add(this.dataGridView3);
-            this.assignPanel.Controls.Add(this.groupBox3);
-            this.assignPanel.Location = new System.Drawing.Point(4, 29);
-            this.assignPanel.Name = "assignPanel";
-            this.assignPanel.Size = new System.Drawing.Size(542, 452);
-            this.assignPanel.TabIndex = 3;
-            this.assignPanel.Text = "Cursos";
-            this.assignPanel.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.AllowUserToAddRows = false;
-            this.dataGridView3.AllowUserToDeleteRows = false;
-            this.dataGridView3.AllowUserToResizeRows = false;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(9, 169);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.ReadOnly = true;
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.RowTemplate.Height = 29;
-            this.dataGridView3.Size = new System.Drawing.Size(521, 271);
-            this.dataGridView3.TabIndex = 2;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.cursoIdSearch);
-            this.groupBox3.Controls.Add(this.cursoRemove);
-            this.groupBox3.Controls.Add(this.cursoModify);
-            this.groupBox3.Controls.Add(this.cursoRegister);
-            this.groupBox3.Controls.Add(this.cursoLoc);
-            this.groupBox3.Controls.Add(this.label23);
-            this.groupBox3.Controls.Add(this.cursoGrade);
-            this.groupBox3.Controls.Add(this.label26);
-            this.groupBox3.Controls.Add(this.cursoSlots);
-            this.groupBox3.Controls.Add(this.label28);
-            this.groupBox3.Controls.Add(this.cursoID);
-            this.groupBox3.Controls.Add(this.label29);
-            this.groupBox3.Location = new System.Drawing.Point(8, 4);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(527, 159);
-            this.groupBox3.TabIndex = 1;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Para cualquier operacion se requiere el codigo de curso";
-            // 
-            // cursoIdSearch
-            // 
-            this.cursoIdSearch.BackgroundImage = global::LittleSteps_Database.Properties.Resources.magnifying_glass;
-            this.cursoIdSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cursoIdSearch.Location = new System.Drawing.Point(192, 24);
-            this.cursoIdSearch.Name = "cursoIdSearch";
-            this.cursoIdSearch.Size = new System.Drawing.Size(27, 27);
-            this.cursoIdSearch.TabIndex = 18;
-            this.cursoIdSearch.UseVisualStyleBackColor = true;
-            this.cursoIdSearch.Click += new System.EventHandler(this.cursoIdSearch_Click);
-            // 
-            // cursoRemove
-            // 
-            this.cursoRemove.Location = new System.Drawing.Point(424, 123);
-            this.cursoRemove.Name = "cursoRemove";
-            this.cursoRemove.Size = new System.Drawing.Size(94, 29);
-            this.cursoRemove.TabIndex = 16;
-            this.cursoRemove.Text = "Eliminar";
-            this.cursoRemove.UseVisualStyleBackColor = true;
-            this.cursoRemove.Click += new System.EventHandler(this.cursoRemove_Click);
-            // 
-            // cursoModify
-            // 
-            this.cursoModify.Location = new System.Drawing.Point(222, 123);
-            this.cursoModify.Name = "cursoModify";
-            this.cursoModify.Size = new System.Drawing.Size(94, 29);
-            this.cursoModify.TabIndex = 15;
-            this.cursoModify.Text = "Modificar";
-            this.cursoModify.UseVisualStyleBackColor = true;
-            this.cursoModify.Click += new System.EventHandler(this.cursoModify_Click);
-            // 
-            // cursoRegister
-            // 
-            this.cursoRegister.Location = new System.Drawing.Point(7, 123);
-            this.cursoRegister.Name = "cursoRegister";
-            this.cursoRegister.Size = new System.Drawing.Size(94, 29);
-            this.cursoRegister.TabIndex = 14;
-            this.cursoRegister.Text = "Registrar";
-            this.cursoRegister.UseVisualStyleBackColor = true;
-            this.cursoRegister.Click += new System.EventHandler(this.cursoRegister_Click);
-            // 
-            // cursoLoc
-            // 
-            this.cursoLoc.Location = new System.Drawing.Point(77, 90);
-            this.cursoLoc.MaxLength = 13;
-            this.cursoLoc.Name = "cursoLoc";
-            this.cursoLoc.Size = new System.Drawing.Size(441, 27);
-            this.cursoLoc.TabIndex = 13;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(-4, 93);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(75, 20);
-            this.label23.TabIndex = 12;
-            this.label23.Text = "Ubicacion";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // cursoGrade
-            // 
-            this.cursoGrade.Location = new System.Drawing.Point(376, 57);
-            this.cursoGrade.MaxLength = 13;
-            this.cursoGrade.Name = "cursoGrade";
-            this.cursoGrade.Size = new System.Drawing.Size(142, 27);
-            this.cursoGrade.TabIndex = 7;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(324, 60);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(50, 20);
-            this.label26.TabIndex = 6;
-            this.label26.Text = "Grado";
-            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // cursoSlots
-            // 
-            this.cursoSlots.Location = new System.Drawing.Point(77, 57);
-            this.cursoSlots.MaxLength = 13;
-            this.cursoSlots.Name = "cursoSlots";
-            this.cursoSlots.Size = new System.Drawing.Size(142, 27);
-            this.cursoSlots.TabIndex = 3;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(21, 60);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(50, 20);
-            this.label28.TabIndex = 2;
-            this.label28.Text = "Cupos";
-            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // cursoID
-            // 
-            this.cursoID.Location = new System.Drawing.Point(77, 24);
-            this.cursoID.MaxLength = 13;
-            this.cursoID.Name = "cursoID";
-            this.cursoID.PlaceholderText = "x-x";
-            this.cursoID.Size = new System.Drawing.Size(109, 27);
-            this.cursoID.TabIndex = 1;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(25, 27);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(46, 20);
-            this.label29.TabIndex = 0;
-            this.label29.Text = "Curso";
-            this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // classPanel
             // 
             this.classPanel.Controls.Add(this.dataGridView1);
             this.classPanel.Controls.Add(this.groupBox4);
             this.classPanel.Location = new System.Drawing.Point(4, 29);
             this.classPanel.Name = "classPanel";
-            this.classPanel.Size = new System.Drawing.Size(542, 452);
+            this.classPanel.Size = new System.Drawing.Size(551, 477);
             this.classPanel.TabIndex = 4;
             this.classPanel.Text = "Clases";
             this.classPanel.UseVisualStyleBackColor = true;
@@ -1000,54 +831,119 @@ namespace LittleSteps_Database
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(10, 173);
+            this.dataGridView1.Location = new System.Drawing.Point(10, 180);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(521, 271);
+            this.dataGridView1.Size = new System.Drawing.Size(521, 264);
             this.dataGridView1.TabIndex = 4;
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.classCurso);
+            this.groupBox4.Controls.Add(this.classDiaClase);
+            this.groupBox4.Controls.Add(this.label24);
+            this.groupBox4.Controls.Add(this.ClassLoc);
+            this.groupBox4.Controls.Add(this.label17);
+            this.groupBox4.Controls.Add(this.ClassGrade);
+            this.groupBox4.Controls.Add(this.label12);
+            this.groupBox4.Controls.Add(this.classInscAlumn);
             this.groupBox4.Controls.Add(this.label16);
             this.groupBox4.Controls.Add(this.classIdSearch);
             this.groupBox4.Controls.Add(this.classRemove);
             this.groupBox4.Controls.Add(this.classModify);
             this.groupBox4.Controls.Add(this.classRegister);
-            this.groupBox4.Controls.Add(this.dateTimePicker4);
+            this.groupBox4.Controls.Add(this.Horario);
             this.groupBox4.Controls.Add(this.classTime);
-            this.groupBox4.Controls.Add(this.classOccupied);
-            this.groupBox4.Controls.Add(this.label27);
             this.groupBox4.Controls.Add(this.className);
             this.groupBox4.Controls.Add(this.label31);
             this.groupBox4.Controls.Add(this.classID);
             this.groupBox4.Controls.Add(this.label32);
             this.groupBox4.Location = new System.Drawing.Point(8, 8);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(527, 159);
+            this.groupBox4.Size = new System.Drawing.Size(527, 176);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Para cualquier operacion se requiere el codigo del curso";
+            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
-            // classCurso
+            // classDiaClase
             // 
-            this.classCurso.Location = new System.Drawing.Point(376, 90);
-            this.classCurso.MaxLength = 13;
-            this.classCurso.Name = "classCurso";
-            this.classCurso.Size = new System.Drawing.Size(142, 27);
-            this.classCurso.TabIndex = 20;
+            this.classDiaClase.Location = new System.Drawing.Point(376, 60);
+            this.classDiaClase.MaxLength = 13;
+            this.classDiaClase.Name = "classDiaClase";
+            this.classDiaClase.Size = new System.Drawing.Size(142, 27);
+            this.classDiaClase.TabIndex = 26;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(295, 63);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(75, 20);
+            this.label24.TabIndex = 25;
+            this.label24.Text = "Dias clase";
+            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label24.Click += new System.EventHandler(this.label24_Click);
+            // 
+            // ClassLoc
+            // 
+            this.ClassLoc.Location = new System.Drawing.Point(77, 93);
+            this.ClassLoc.MaxLength = 13;
+            this.ClassLoc.Name = "ClassLoc";
+            this.ClassLoc.Size = new System.Drawing.Size(142, 27);
+            this.ClassLoc.TabIndex = 24;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(-4, 96);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(75, 20);
+            this.label17.TabIndex = 23;
+            this.label17.Text = "Ubicacion";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label17.Click += new System.EventHandler(this.label17_Click);
+            // 
+            // ClassGrade
+            // 
+            this.ClassGrade.Location = new System.Drawing.Point(468, 96);
+            this.ClassGrade.MaxLength = 13;
+            this.ClassGrade.Name = "ClassGrade";
+            this.ClassGrade.Size = new System.Drawing.Size(50, 27);
+            this.ClassGrade.TabIndex = 22;
+            this.ClassGrade.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(225, 99);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(125, 20);
+            this.label12.TabIndex = 21;
+            this.label12.Text = "Alumnos inscritos";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label12.Click += new System.EventHandler(this.label12_Click);
+            // 
+            // classInscAlumn
+            // 
+            this.classInscAlumn.Location = new System.Drawing.Point(356, 96);
+            this.classInscAlumn.MaxLength = 13;
+            this.classInscAlumn.Name = "classInscAlumn";
+            this.classInscAlumn.Size = new System.Drawing.Size(50, 27);
+            this.classInscAlumn.TabIndex = 20;
+            this.classInscAlumn.TextChanged += new System.EventHandler(this.classGrado_TextChanged);
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(324, 93);
+            this.label16.Location = new System.Drawing.Point(412, 99);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(46, 20);
+            this.label16.Size = new System.Drawing.Size(50, 20);
             this.label16.TabIndex = 19;
-            this.label16.Text = "Curso";
+            this.label16.Text = "Grado";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // classIdSearch
             // 
@@ -1062,7 +958,7 @@ namespace LittleSteps_Database
             // 
             // classRemove
             // 
-            this.classRemove.Location = new System.Drawing.Point(424, 121);
+            this.classRemove.Location = new System.Drawing.Point(424, 137);
             this.classRemove.Name = "classRemove";
             this.classRemove.Size = new System.Drawing.Size(94, 29);
             this.classRemove.TabIndex = 16;
@@ -1072,7 +968,7 @@ namespace LittleSteps_Database
             // 
             // classModify
             // 
-            this.classModify.Location = new System.Drawing.Point(222, 121);
+            this.classModify.Location = new System.Drawing.Point(209, 137);
             this.classModify.Name = "classModify";
             this.classModify.Size = new System.Drawing.Size(94, 29);
             this.classModify.TabIndex = 15;
@@ -1082,7 +978,7 @@ namespace LittleSteps_Database
             // 
             // classRegister
             // 
-            this.classRegister.Location = new System.Drawing.Point(7, 121);
+            this.classRegister.Location = new System.Drawing.Point(7, 137);
             this.classRegister.Name = "classRegister";
             this.classRegister.Size = new System.Drawing.Size(94, 29);
             this.classRegister.TabIndex = 14;
@@ -1090,40 +986,28 @@ namespace LittleSteps_Database
             this.classRegister.UseVisualStyleBackColor = true;
             this.classRegister.Click += new System.EventHandler(this.classRegister_Click);
             // 
-            // dateTimePicker4
+            // Horario
             // 
-            this.dateTimePicker4.Location = new System.Drawing.Point(376, 55);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(142, 27);
-            this.dateTimePicker4.TabIndex = 11;
+            this.Horario.CustomFormat = "HH:mm";
+            this.Horario.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.Horario.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.Horario.Location = new System.Drawing.Point(376, 26);
+            this.Horario.Name = "Horario";
+            this.Horario.Size = new System.Drawing.Size(142, 27);
+            this.Horario.TabIndex = 11;
+            this.Horario.Value = new System.DateTime(2021, 11, 30, 21, 24, 0, 0);
+            this.Horario.ValueChanged += new System.EventHandler(this.dateTimePicker4_ValueChanged);
             // 
             // classTime
             // 
             this.classTime.AutoSize = true;
-            this.classTime.Location = new System.Drawing.Point(242, 58);
+            this.classTime.Location = new System.Drawing.Point(310, 30);
             this.classTime.Name = "classTime";
-            this.classTime.Size = new System.Drawing.Size(128, 20);
+            this.classTime.Size = new System.Drawing.Size(60, 20);
             this.classTime.TabIndex = 10;
-            this.classTime.Text = "Fecha Nacimiento";
+            this.classTime.Text = "Horario";
             this.classTime.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // classOccupied
-            // 
-            this.classOccupied.Location = new System.Drawing.Point(77, 90);
-            this.classOccupied.MaxLength = 13;
-            this.classOccupied.Name = "classOccupied";
-            this.classOccupied.Size = new System.Drawing.Size(142, 27);
-            this.classOccupied.TabIndex = 5;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(5, 93);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(67, 20);
-            this.label27.TabIndex = 4;
-            this.label27.Text = "Alumnos";
-            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.classTime.Click += new System.EventHandler(this.classTime_Click);
             // 
             // className
             // 
@@ -1166,13 +1050,15 @@ namespace LittleSteps_Database
             this.factPanel.Controls.Add(this.groupBox5);
             this.factPanel.Location = new System.Drawing.Point(4, 29);
             this.factPanel.Name = "factPanel";
-            this.factPanel.Size = new System.Drawing.Size(542, 452);
+            this.factPanel.Size = new System.Drawing.Size(551, 477);
             this.factPanel.TabIndex = 5;
             this.factPanel.Text = "Factura";
             this.factPanel.UseVisualStyleBackColor = true;
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.fact_cedula_tutor);
+            this.groupBox5.Controls.Add(this.label23);
             this.groupBox5.Controls.Add(this.factGenerate);
             this.groupBox5.Controls.Add(this.factFechaLimite);
             this.groupBox5.Controls.Add(this.label34);
@@ -1185,9 +1071,27 @@ namespace LittleSteps_Database
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Para proceder se debe tener un monto";
             // 
+            // fact_cedula_tutor
+            // 
+            this.fact_cedula_tutor.Location = new System.Drawing.Point(222, 92);
+            this.fact_cedula_tutor.MaxLength = 13;
+            this.fact_cedula_tutor.Name = "fact_cedula_tutor";
+            this.fact_cedula_tutor.Size = new System.Drawing.Size(142, 27);
+            this.fact_cedula_tutor.TabIndex = 17;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(125, 95);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(91, 20);
+            this.label23.TabIndex = 16;
+            this.label23.Text = "Cedula tutor";
+            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // factGenerate
             // 
-            this.factGenerate.Location = new System.Drawing.Point(222, 92);
+            this.factGenerate.Location = new System.Drawing.Point(222, 127);
             this.factGenerate.Name = "factGenerate";
             this.factGenerate.Size = new System.Drawing.Size(94, 29);
             this.factGenerate.TabIndex = 15;
@@ -1241,11 +1145,22 @@ namespace LittleSteps_Database
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // dataGridTeacher
+            // 
+            this.dataGridTeacher.Location = new System.Drawing.Point(235, 507);
+            this.dataGridTeacher.Name = "dataGridTeacher";
+            this.dataGridTeacher.Size = new System.Drawing.Size(94, 29);
+            this.dataGridTeacher.TabIndex = 3;
+            this.dataGridTeacher.Text = "Refresh";
+            this.dataGridTeacher.UseVisualStyleBackColor = true;
+            this.dataGridTeacher.Click += new System.EventHandler(this.button1_Click);
+            // 
             // EmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(548, 516);
+            this.ClientSize = new System.Drawing.Size(557, 549);
+            this.Controls.Add(this.dataGridTeacher);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1265,10 +1180,6 @@ namespace LittleSteps_Database
             ((System.ComponentModel.ISupportInitialize)(this.profTable)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.assignPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.classPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox4.ResumeLayout(false);
@@ -1293,7 +1204,7 @@ namespace LittleSteps_Database
         private System.Windows.Forms.Button parentRemove;
         private System.Windows.Forms.Button parentModify;
         private System.Windows.Forms.Button parentRegister;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox parentLoc;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker parentDate;
         private System.Windows.Forms.Label label7;
@@ -1329,8 +1240,8 @@ namespace LittleSteps_Database
         private System.Windows.Forms.Button profRemove;
         private System.Windows.Forms.Button profModify;
         private System.Windows.Forms.Button profRegister;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.Label profDate;
+        private System.Windows.Forms.DateTimePicker profDate;
+        private System.Windows.Forms.Label A;
         private System.Windows.Forms.TextBox profPhone;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox profEmail;
@@ -1370,10 +1281,8 @@ namespace LittleSteps_Database
         private System.Windows.Forms.Button classRemove;
         private System.Windows.Forms.Button classModify;
         private System.Windows.Forms.Button classRegister;
-        private System.Windows.Forms.DateTimePicker dateTimePicker4;
+        private System.Windows.Forms.DateTimePicker Horario;
         private System.Windows.Forms.Label classTime;
-        private System.Windows.Forms.TextBox classOccupied;
-        private System.Windows.Forms.Label label27;
         private System.Windows.Forms.TextBox className;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.TextBox classID;
@@ -1385,6 +1294,14 @@ namespace LittleSteps_Database
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.TextBox factMonto;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.TextBox classCurso;
+        private System.Windows.Forms.TextBox classInscAlumn;
+        private System.Windows.Forms.TextBox ClassLoc;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox ClassGrade;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox fact_cedula_tutor;
+        private System.Windows.Forms.TextBox classDiaClase;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Button dataGridTeacher;
     }
 }

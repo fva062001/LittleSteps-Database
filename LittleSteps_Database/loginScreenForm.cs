@@ -129,7 +129,7 @@ namespace LittleSteps_Database
                             passwordCheck = reader["contrasena"].ToString();
                             if (username == usernameCheck && password == passwordCheck)
                             {
-                                MessageBox.Show("Loggin Succesfully");
+                                MessageBox.Show("Login Succesful");
                                 //Aqui va abrir los forms 
                                 employeeScreen = new EmployeeForm();
                                 employeeScreen.Show();

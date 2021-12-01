@@ -16,10 +16,6 @@ namespace LittleSteps_Database
         [STAThread]
         static void Main()
         {
-            String connection = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
-
-            SqlConnection con = new SqlConnection(connection);
-            con.Open();
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
