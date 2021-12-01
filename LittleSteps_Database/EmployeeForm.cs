@@ -357,8 +357,13 @@ namespace LittleSteps_Database
                 {
                     MessageBox.Show("El tutor no existe, porfavor cambie la cedula nuevamente para poder completar el registro");
                 }
+                else if( DateTime.Today.Year - studentDate.Value.Year > 5 || DateTime.Today.Year - studentDate.Value.Year < 3)
+                {
+                    MessageBox.Show("El estudiante solamente puede tener entre 3 y 5 años");
+                }
                 else
                 {
+                    string a = studentParentID.Text;
                     SqlConnection con = new SqlConnection(connection);
                     con.Open();
                     string insertQuery = "insert into estudiante(matricula, nombre, apellido, sexo, fecha_nacimiento, grado, id_tutor) values (@matricula, @nombre, @apellido, @sexo, @fecha_nacimiento, @grado, @tutor)";
@@ -366,7 +371,7 @@ namespace LittleSteps_Database
                     comm1.Parameters.AddWithValue("@matricula",studentID.Text);
                     comm1.Parameters.AddWithValue("@nombre",studentName.Text);
                     comm1.Parameters.AddWithValue("@apellido",studentLast.Text);
-                    comm1.Parameters.AddWithValue("@tutor",studentParentID.Text);
+                    comm1.Parameters.AddWithValue("@tutor",a);
                     comm1.Parameters.AddWithValue("@fecha_nacimiento",studentDate.Value.ToString());
                     if(studentSexF.Checked == true)
                     {

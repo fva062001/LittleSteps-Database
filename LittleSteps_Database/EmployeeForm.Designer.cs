@@ -68,7 +68,6 @@ namespace LittleSteps_Database
             this.label9 = new System.Windows.Forms.Label();
             this.studentDate = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
-            this.studentParentID = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.studentLast = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -126,6 +125,7 @@ namespace LittleSteps_Database
             this.factMonto = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.studentParentID = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.parentPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.parentTable)).BeginInit();
@@ -432,6 +432,7 @@ namespace LittleSteps_Database
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.studentParentID);
             this.groupBox1.Controls.Add(this.studentGrade);
             this.groupBox1.Controls.Add(this.label30);
             this.groupBox1.Controls.Add(this.studentSexF);
@@ -443,7 +444,6 @@ namespace LittleSteps_Database
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.studentDate);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.studentParentID);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.studentLast);
             this.groupBox1.Controls.Add(this.label13);
@@ -565,15 +565,6 @@ namespace LittleSteps_Database
             this.label10.TabIndex = 10;
             this.label10.Text = "Fecha Nacimiento";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // studentParentID
-            // 
-            this.studentParentID.Location = new System.Drawing.Point(376, 57);
-            this.studentParentID.MaxLength = 13;
-            this.studentParentID.Name = "studentParentID";
-            this.studentParentID.PlaceholderText = "xxx-xxxxxxx-x";
-            this.studentParentID.Size = new System.Drawing.Size(142, 27);
-            this.studentParentID.TabIndex = 9;
             // 
             // label11
             // 
@@ -1175,6 +1166,15 @@ namespace LittleSteps_Database
             this.label1.Text = "Bienvenid@ de vuelta";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // studentParentID
+            // 
+            this.studentParentID.Location = new System.Drawing.Point(376, 57);
+            this.studentParentID.MaxLength = 13;
+            this.studentParentID.Name = "studentParentID";
+            this.studentParentID.PlaceholderText = "xxx-xxxxxxx-x";
+            this.studentParentID.Size = new System.Drawing.Size(142, 27);
+            this.studentParentID.TabIndex = 23;
             // 
             // EmployeeForm
             // 

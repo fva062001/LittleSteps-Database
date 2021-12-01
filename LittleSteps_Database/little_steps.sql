@@ -19,20 +19,32 @@ sexo char(1) NOT NULL,
 fecha_nacimiento date NOT NULL,
 edad as CONVERT(INT, ROUND(DATEDIFF(HOUR, fecha_nacimiento, GETDATE()) / 8766.0, 0)),
 grado int NOT NULL, 
-id_tutor varchar(13) FOREIGN KEY REFERENCES tutor(cedula) NOT NULL
+id_tutor varchar(13) FOREIGN KEY REFERENCES tutor(cedula)
 );
 
 create trigger verificar_edad on estudiante
-after insert 
+instead of insert
 as
 begin
-BEGIN TRANSACTION
-declare @edad int
+SET NOCOUNT ON
+declare @edad int, @matricula int, @nombre varchar(10), @apellido varchar(10), @sexo char(1), @fecha_nacimiento date, @grado int;
+
+set @matricula = (select matricula from inserted)
+set @nombre = (select nombre from inserted)
+set @apellido = (select apellido from inserted)
+set @sexo = (select sexo from inserted)
 set @edad = (select edad from inserted)
-Print @edad
-if @edad not between 3 and 5
-	ROLLBACK TRANSACTION
+set @fecha_nacimiento = (select fecha_nacimiento from inserted)
+set @grado = (select grado from inserted)
+
+if(@edad between 3 and 5)
+    insert into estudiante(matricula, nombre, apellido, sexo, fecha_nacimiento, grado)
+    values(@matricula, @nombre, @apellido, @sexo, @fecha_nacimiento, @grado)
+else
+    print 'La edad del estudiante debe ser entre 3 y 5';
 END
+
+insert into estudiante(matricula, nombre, apellido, sexo, edad, fecha_nacimiento, grado) values()
 
 //-----------------------------------------------------------------------------------------------------//
 
